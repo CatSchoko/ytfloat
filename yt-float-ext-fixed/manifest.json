@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Float",
+  "version": "3.3",
+  "description": "Schwebendes YouTube-Fenster – extern, OS Click-Through & Transparenz via Native Host",
+  "permissions": ["nativeMessaging"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Float"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16":  "icons/icon16.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

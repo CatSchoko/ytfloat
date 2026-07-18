@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width:280px; font-family:Arial,sans-serif; font-size:12px; background:#111; color:#ddd; padding:12px; margin:0; }
+  h3 { margin:0 0 10px; font-size:13px; color:#fff; }
+  .row { display:flex; align-items:center; gap:8px; margin:6px 0; }
+  .dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+  .ok   { background:#3a3; }
+  .fail { background:#a33; }
+  .warn { background:#a73; }
+  .label { color:#aaa; }
+  .val { color:#fff; font-size:11px; word-break:break-all; }
+  .id-box { background:#1a1a1a; border:1px solid #333; border-radius:4px; padding:5px 8px; margin:6px 0; font-size:11px; color:#8cf; word-break:break-all; cursor:text; }
+  button { background:#2a2a2a; color:#ccc; border:1px solid #444; border-radius:4px; padding:4px 10px; cursor:pointer; font-size:11px; width:100%; margin-top:8px; }
+  button:hover { background:#333; color:#fff; }
+  .sep { border:none; border-top:1px solid #222; margin:10px 0; }
+  .hint { color:#666; font-size:10px; line-height:1.5; margin-top:6px; }
+  #err { color:#f66; font-size:11px; margin-top:4px; display:none; }
+</style>
+</head>
+<body>
+<h3>YouTube Float – Status</h3>
+
+<div class="row">
+  <div class="dot" id="dot-host"></div>
+  <span class="label">Native Host:</span>
+  <span class="val" id="txt-host">Prüfe...</span>
+</div>
+<div id="err" id="err-msg"></div>
+
+<hr class="sep">
+<div class="label" style="margin-bottom:4px">Deine Extension-ID:</div>
+<div class="id-box" id="ext-id">–</div>
+<div class="hint">
+  Diese ID muss in <code>com.ytfloat.helper.json</code> stehen.<br>
+  Falls nicht → <code>install.bat</code> nochmal ausführen.
+</div>
+
+<button id="btn-test">Verbindung testen</button>
+<button id="btn-copy">Extension-ID kopieren</button>
+
+<script src="popup.js"></script>
+</body>
+</html>

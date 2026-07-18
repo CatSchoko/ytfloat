@@ -1,0 +1,14 @@
+/* ── Float-Button im Player ─────────────────────────────────────────────── */
+#ytf-trigger {
+  position: absolute; top: 12px; right: 12px; z-index: 9999;
+  display: flex; align-items: center; gap: 5px;
+  background: rgba(0,0,0,0.72); color: #fff;
+  border: 1px solid rgba(255,255,255,0.15); border-radius: 5px;
+  padding: 4px 10px; font-size: 12px; font-family: Arial, sans-serif;
+  cursor: pointer; transition: background 0.2s;
+}
+#ytf-trigger:hover { background: rgba(180,0,0,0.85); border-color: transparent; }
+#ytf-trigger {
+  transition: opacity 0.25s ease, background 0.2s;
+}
+#ytf-trigger svg { flex-shrink: 0; }
