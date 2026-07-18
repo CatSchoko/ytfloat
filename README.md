@@ -14,3 +14,5 @@ Made of two parts: the Chrome extension (`yt-float-ext-fixed/`) and a small nati
 2. Run `ytfloat-native-host/native-host/build.bat` (requires .NET Framework 4.x)
 3. Run `install.bat` and paste in your extension ID
 4. Restart the browser
+
+License MIT — see LICENSE.
